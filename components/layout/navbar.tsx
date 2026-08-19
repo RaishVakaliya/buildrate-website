@@ -25,7 +25,7 @@ export function Navbar() {
         <Link href="/" className="flex items-center gap-3 shrink-0 select-none">
           <div className="relative size-10 rounded-xl overflow-hidden bg-[#c5ad89] border border-border/60 shadow-sm flex items-center justify-center shrink-0">
             <Image
-              src="/app-logo.png"
+              src="/app-logo.webp"
               alt="BuildRate Logo"
               width={36}
               height={36}

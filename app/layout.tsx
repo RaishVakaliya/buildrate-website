@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { SmoothScrollProvider } from "@/components/providers/smooth-scroll-provider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -74,7 +75,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn(inter.variable, geistMono.variable)}>
       <body className="min-h-screen flex flex-col font-sans antialiased bg-background text-foreground">
-        {children}
+        <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>
     </html>
   );
