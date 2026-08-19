@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Hero } from "@/components/hero/hero";
 import { Features } from "@/components/features/features";
 import { HowItWorks } from "@/components/how-it-works/how-it-works";
+import { BecomeSupplier } from "@/components/become-supplier/become-supplier";
 import { GoToTop } from "@/components/ui/go-to-top";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
         <Hero />
         <Features />
         <HowItWorks />
+        <BecomeSupplier />
       </main>
       <GoToTop />
     </div>
