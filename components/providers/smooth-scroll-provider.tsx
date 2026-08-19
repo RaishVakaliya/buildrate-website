@@ -1,8 +1,25 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import React, { createContext, useContext, useEffect, useRef } from "react";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
+
+interface SmoothScrollContextValue {
+  scrollTo: (
+    target: string | HTMLElement | number,
+    options?: { offset?: number; duration?: number }
+  ) => void;
+  scrollToTop: () => void;
+}
+
+const SmoothScrollContext = createContext<SmoothScrollContextValue>({
+  scrollTo: () => {},
+  scrollToTop: () => {},
+});
+
+export function useSmoothScroll() {
+  return useContext(SmoothScrollContext);
+}
 
 interface SmoothScrollProviderProps {
   children: React.ReactNode;
@@ -10,6 +27,37 @@ interface SmoothScrollProviderProps {
 
 export function SmoothScrollProvider({ children }: SmoothScrollProviderProps) {
   const lenisRef = useRef<Lenis | null>(null);
+
+  const scrollTo = (
+    target: string | HTMLElement | number,
+    options?: { offset?: number; duration?: number }
+  ) => {
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(target as HTMLElement, {
+        offset: options?.offset ?? -70,
+        duration: options?.duration ?? 1.2,
+      });
+    } else {
+      if (typeof target === "number") {
+        window.scrollTo({ top: target, behavior: "smooth" });
+      } else if (typeof target === "string") {
+        const element = document.querySelector(target);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      } else if (target instanceof HTMLElement) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
+  const scrollToTop = () => {
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { duration: 1.2 });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia(
@@ -69,5 +117,9 @@ export function SmoothScrollProvider({ children }: SmoothScrollProviderProps) {
     };
   }, []);
 
-  return <>{children}</>;
+  return (
+    <SmoothScrollContext.Provider value={{ scrollTo, scrollToTop }}>
+      {children}
+    </SmoothScrollContext.Provider>
+  );
 }

@@ -1,6 +1,8 @@
 import { Navbar } from "@/components/layout/navbar";
 import { Hero } from "@/components/hero/hero";
 import { Features } from "@/components/features/features";
+import { HowItWorks } from "@/components/how-it-works/how-it-works";
+import { GoToTop } from "@/components/ui/go-to-top";
 
 export default function Home() {
   return (
@@ -9,7 +11,9 @@ export default function Home() {
       <main className="relative z-10 flex-1 flex flex-col pt-15">
         <Hero />
         <Features />
+        <HowItWorks />
       </main>
+      <GoToTop />
     </div>
   );
 }
