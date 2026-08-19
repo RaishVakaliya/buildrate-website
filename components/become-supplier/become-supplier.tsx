@@ -1,10 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "motion/react";
-import { ShieldCheck, Store, ArrowRight } from "lucide-react";
-import { Button } from "@/components/animate-ui/components/buttons/button";
+import { ShieldCheck, Store } from "lucide-react";
 
 const SUPPLIER_STEPS = [
   {
@@ -116,19 +114,6 @@ export function BecomeSupplier() {
                 All applications are reviewed and verified by BuildRate admins
                 before supplier credentials are provided.
               </span>
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5">
-              <Button
-                asChild
-                size="lg"
-                className="w-full sm:w-auto text-base font-semibold shadow-lg shadow-primary/25 cursor-pointer"
-              >
-                <Link href="#download">
-                  <span>Become a Supplier</span>
-                  <ArrowRight className="size-4" />
-                </Link>
-              </Button>
             </div>
           </motion.div>
         </div>
