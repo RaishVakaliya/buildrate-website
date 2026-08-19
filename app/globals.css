@@ -35,31 +35,59 @@
 
 :root {
   --background: #464646;
-  --foreground: oklch(0.96 0.005 80);
-  --card: oklch(0.17 0.012 250);
-  --card-foreground: oklch(0.96 0.005 80);
-  --popover: oklch(0.17 0.012 250);
-  --popover-foreground: oklch(0.96 0.005 80);
+  --foreground: oklch(0.98 0 0);
+  --card: oklch(0.33 0.005 250);
+  --card-foreground: oklch(0.98 0 0);
+  --popover: oklch(0.33 0.005 250);
+  --popover-foreground: oklch(0.98 0 0);
 
-  --primary: oklch(0.72 0.165 48);
+  --primary: oklch(0.74 0.17 48);
   --primary-foreground: oklch(0.12 0.012 260);
 
-  --secondary: oklch(0.22 0.014 250);
-  --secondary-foreground: oklch(0.92 0.005 80);
+  --secondary: oklch(0.38 0.006 250);
+  --secondary-foreground: oklch(0.96 0 0);
 
-  --muted: oklch(0.2 0.012 250);
-  --muted-foreground: oklch(0.68 0.015 240);
+  --muted: oklch(0.35 0.005 250);
+  --muted-foreground: oklch(0.82 0.008 240);
 
-  --accent: oklch(0.25 0.035 230);
-  --accent-foreground: oklch(0.88 0.05 230);
+  --accent: oklch(0.38 0.02 48);
+  --accent-foreground: oklch(0.98 0 0);
 
   --destructive: oklch(0.65 0.22 27);
 
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 12%);
-  --ring: oklch(0.72 0.165 48);
+  --border: oklch(1 0 0 / 14%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: oklch(0.74 0.17 48);
 
   --radius: 0.5rem;
+}
+
+::selection {
+  background-color: oklch(0.74 0.17 48 / 0.38);
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: oklch(0.52 0.008 250 / 0.5);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.74 0.17 48 / 0.75);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: oklch(0.52 0.008 250 / 0.5) transparent;
 }
 
 @layer base {
@@ -96,7 +124,7 @@
     transform: translateY(0px) rotate(0deg);
   }
   50% {
-    transform: translateY(-12px) rotate(1.5deg);
+    transform: translateY(-10px) rotate(1deg);
   }
 }
 
@@ -106,7 +134,7 @@
     transform: translateY(0px) rotate(0deg);
   }
   50% {
-    transform: translateY(10px) rotate(-1.5deg);
+    transform: translateY(8px) rotate(-1deg);
   }
 }
 
