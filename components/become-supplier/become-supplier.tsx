@@ -34,7 +34,7 @@ export function BecomeSupplier() {
     <section
       id="become-a-supplier"
       aria-labelledby="supplier-heading"
-      className="relative pt-8 pb-16 md:pt-14 md:pb-24 border-t border-border/50 overflow-hidden"
+      className="relative pt-8 pb-8 md:pt-14 md:pb-12 border-t border-border/50 overflow-hidden"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">

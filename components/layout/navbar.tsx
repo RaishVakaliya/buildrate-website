@@ -9,7 +9,6 @@ import { Button } from "@/components/animate-ui/components/buttons/button";
 import { Download as DownloadIcon } from "@/components/animate-ui/icons/download";
 
 const NAV_LINKS = [
-  { label: "Home", href: "#home" },
   { label: "Features", href: "#features" },
   { label: "How It Works", href: "#how-it-works" },
   { label: "Become a Supplier", href: "#become-a-supplier", highlight: true },
@@ -22,7 +21,10 @@ export function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-border/80 bg-background/90 backdrop-blur-md">
       <div className="mx-auto flex h-15 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="#home" className="flex items-center gap-3 shrink-0 select-none">
+        <Link
+          href="#home"
+          className="flex items-center gap-3 shrink-0 select-none"
+        >
           <div className="relative size-10 rounded-xl overflow-hidden bg-[#c5ad89] border border-border/60 shadow-sm flex items-center justify-center shrink-0">
             <Image
               src="/app-logo.webp"
@@ -78,7 +80,7 @@ export function Navbar() {
           >
             <Link href="#download">
               <DownloadIcon size={16} animateOnHover />
-              <span>Download App</span>
+              <span>Get BuildRate</span>
             </Link>
           </Button>
         </div>
@@ -146,7 +148,7 @@ export function Navbar() {
               >
                 <Link href="#download" onClick={() => setMobileMenuOpen(false)}>
                   <DownloadIcon size={16} animateOnHover />
-                  <span>Download App</span>
+                  <span>Get BuildRate</span>
                 </Link>
               </Button>
             </div>

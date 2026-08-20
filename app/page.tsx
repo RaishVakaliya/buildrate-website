@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero/hero";
 import { Features } from "@/components/features/features";
 import { HowItWorks } from "@/components/how-it-works/how-it-works";
 import { BecomeSupplier } from "@/components/become-supplier/become-supplier";
+import { DownloadSection } from "@/components/download/download";
 import { Footer } from "@/components/layout/footer";
 import { GoToTop } from "@/components/ui/go-to-top";
 
@@ -15,6 +16,7 @@ export default function Home() {
         <Features />
         <HowItWorks />
         <BecomeSupplier />
+        <DownloadSection />
       </main>
       <Footer />
       <GoToTop />

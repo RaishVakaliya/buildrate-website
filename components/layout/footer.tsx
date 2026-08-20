@@ -6,10 +6,10 @@ import Link from "next/link";
 import { Mail, Sparkles, Send } from "lucide-react";
 
 const FOOTER_LINKS = [
-  { label: "Home", href: "#home" },
   { label: "Features", href: "#features" },
   { label: "How It Works", href: "#how-it-works" },
   { label: "Become a Supplier", href: "#become-a-supplier" },
+  { label: "Get BuildRate", href: "#download" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -33,6 +33,7 @@ export function Footer() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 pb-10 border-b border-border/50">
+          {/* Brand Column */}
           <div className="md:col-span-5 space-y-4">
             <Link
               href="#home"
@@ -70,6 +71,7 @@ export function Footer() {
             )}
           </div>
 
+          {/* Quick Navigation Links */}
           <div className="md:col-span-3 space-y-3">
             <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
               Navigation
@@ -88,6 +90,7 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Highlighted Support & Contact */}
           <div className="md:col-span-4 space-y-3">
             <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
               Contact Support
@@ -111,6 +114,7 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Bottom Bar: Copyright & Credit */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
           <p>&copy; {currentYear} BuildRate. All rights reserved.</p>
 
