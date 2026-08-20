@@ -46,7 +46,7 @@ export function DownloadSection() {
               local suppliers around Ahmedabad.
             </p>
 
-            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5">
+            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5 select-none">
               <a
                 href={STORE_LINKS.googlePlay.url}
                 target="_blank"

@@ -9,6 +9,7 @@ const FOOTER_LINKS = [
   { label: "Features", href: "#features" },
   { label: "How It Works", href: "#how-it-works" },
   { label: "Become a Supplier", href: "#become-a-supplier" },
+  { label: "FAQ", href: "#faq" },
   { label: "Get BuildRate", href: "#download" },
   { label: "Contact", href: "#contact" },
 ];
