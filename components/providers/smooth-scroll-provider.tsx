@@ -65,7 +65,27 @@ export function SmoothScrollProvider({ children }: SmoothScrollProviderProps) {
     ).matches;
 
     if (prefersReducedMotion) {
-      return;
+      const handleReducedMotionAnchorClick = (e: MouseEvent) => {
+        const target = e.target as HTMLElement | null;
+        const anchor = target?.closest("a");
+        if (!anchor) return;
+
+        const href = anchor.getAttribute("href");
+        if (href?.startsWith("#") && href.length > 1) {
+          const element = document.querySelector(href);
+          if (element) {
+            e.preventDefault();
+            const top =
+              element.getBoundingClientRect().top + window.scrollY - 70;
+            window.scrollTo({ top, behavior: "auto" });
+          }
+        }
+      };
+
+      document.addEventListener("click", handleReducedMotionAnchorClick);
+      return () => {
+        document.removeEventListener("click", handleReducedMotionAnchorClick);
+      };
     }
 
     const lenis = new Lenis({

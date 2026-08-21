@@ -97,7 +97,7 @@ export function Hero() {
               <span>Cement &amp; Steel</span>
             </div>
 
-            <div className="hidden sm:flex absolute bottom-[-16] -right-9 xl:-right-10 animate-float-reverse items-center gap-2 px-3 py-1.5 rounded-full border border-border/70 bg-card/75 backdrop-blur-md shadow-lg shadow-black/20 text-xs font-medium text-foreground select-none z-10">
+            <div className="hidden sm:flex absolute -bottom-4 -right-6 xl:-right-10 animate-float-reverse items-center gap-2 px-3 py-1.5 rounded-full border border-border/70 bg-card/75 backdrop-blur-md shadow-lg shadow-black/20 text-xs font-medium text-foreground select-none z-10">
               <Tag className="size-3.5 text-primary" />
               <span>Price Comparison</span>
             </div>
@@ -115,6 +115,7 @@ export function Hero() {
                   alt="BuildRate Mobile Application Home Screen"
                   width={600}
                   height={1200}
+                  sizes="(max-width: 640px) 280px, (max-width: 1024px) 310px, 330px"
                   priority
                   className="w-full h-auto object-cover rounded-[2rem] select-none"
                 />

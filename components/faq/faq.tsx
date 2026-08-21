@@ -101,7 +101,7 @@ const TESTIMONIALS = [
 ];
 
 export function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>();
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleItem = (index: number) => {
     setOpenIndex((prev) => (prev === index ? null : index));
@@ -140,9 +140,11 @@ export function FAQ() {
                   <div key={faq.question} className="py-1">
                     <button
                       type="button"
-                      onClick={() => toggleItem(index)}
-                      className="flex w-full items-center justify-between gap-4 py-4 text-left text-sm sm:text-base font-semibold text-foreground hover:text-foreground transition-colors cursor-pointer"
+                      id={`faq-btn-${index}`}
+                      aria-controls={`faq-panel-${index}`}
                       aria-expanded={isOpen}
+                      onClick={() => toggleItem(index)}
+                      className="flex w-full items-center justify-between gap-4 py-4 text-left text-sm sm:text-base font-semibold text-foreground hover:text-foreground transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-md px-1 -mx-1"
                     >
                       <span>{faq.question}</span>
                       <ChevronDown
@@ -156,15 +158,18 @@ export function FAQ() {
                     <AnimatePresence initial={false}>
                       {isOpen && (
                         <motion.div
+                          id={`faq-panel-${index}`}
+                          role="region"
+                          aria-labelledby={`faq-btn-${index}`}
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: "auto", opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.25, ease: "easeInOut" }}
                           className="overflow-hidden"
                         >
-                          <p className="font-overlock text-xs sm:text-sm text-muted-foreground leading-relaxed pt-0 pb-4">
+                          <div className="font-overlock text-xs sm:text-sm text-muted-foreground leading-relaxed pt-0 pb-4 px-1">
                             {faq.answer}
-                          </p>
+                          </div>
                         </motion.div>
                       )}
                     </AnimatePresence>

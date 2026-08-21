@@ -53,6 +53,7 @@ export function BecomeSupplier() {
                     alt="BuildRate Become a Supplier form"
                     width={600}
                     height={1200}
+                    sizes="(max-width: 640px) 290px, (max-width: 1024px) 320px, 340px"
                     className="w-full h-auto object-cover rounded-[1.75rem] select-none"
                   />
                 </div>
