@@ -28,7 +28,7 @@ export function DownloadSection() {
 
           <div className="relative z-10">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary font-delius text-xs font-semibold tracking-wide mb-5">
-              <span>Available on Android &bull; iOS Coming Soon</span>
+              <span>Available on Indus Appstore &bull; Play Store &amp; iOS Coming Soon</span>
             </div>
 
             <h2
@@ -47,29 +47,6 @@ export function DownloadSection() {
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5 select-none">
-              <a
-                href={STORE_LINKS.googlePlay.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3.5 px-5 py-3 rounded-2xl bg-black/90 hover:bg-black border border-white/20 hover:border-white/40 text-white transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] min-w-[200px] text-left cursor-pointer"
-              >
-                <Image
-                  src="/google-play-store-icon.webp"
-                  alt="Google Play"
-                  width={28}
-                  height={28}
-                  className="size-7 object-contain shrink-0"
-                />
-                <div className="flex flex-col leading-none">
-                  <span className="text-[10px] font-semibold tracking-wider uppercase text-white/70 mb-1">
-                    GET IT ON
-                  </span>
-                  <span className="text-base sm:text-lg font-bold tracking-tight text-white">
-                    Google Play
-                  </span>
-                </div>
-              </a>
-
               <a
                 href={STORE_LINKS.indusAppstore.url}
                 target="_blank"
@@ -92,6 +69,27 @@ export function DownloadSection() {
                   </span>
                 </div>
               </a>
+
+              <div
+                className="inline-flex items-center gap-3.5 px-5 py-3 rounded-2xl bg-black/50 border border-white/10 text-white/40 min-w-[200px] text-left cursor-not-allowed select-none opacity-60 relative group"
+                title="Google Play version is coming soon"
+              >
+                <Image
+                  src="/google-play-store-icon.webp"
+                  alt="Google Play"
+                  width={28}
+                  height={28}
+                  className="size-7 object-contain shrink-0 opacity-60 grayscale"
+                />
+                <div className="flex flex-col leading-none">
+                  <span className="text-[10px] font-semibold tracking-wider uppercase text-white/40 mb-1">
+                    COMING SOON TO
+                  </span>
+                  <span className="text-base sm:text-lg font-bold tracking-tight text-white/60">
+                    Google Play
+                  </span>
+                </div>
+              </div>
 
               <div
                 className="inline-flex items-center gap-3.5 px-5 py-3 rounded-2xl bg-black/50 border border-white/10 text-white/40 min-w-[200px] text-left cursor-not-allowed select-none opacity-60 relative group"

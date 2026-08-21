@@ -2,10 +2,10 @@ export const STORE_LINKS = {
   googlePlay: {
     name: "Google Play",
     platform: "Android",
-    status: "Available" as const,
-    url: "https://play.google.com/store/apps/details?id=com.raish_vakaliya.buildrate",
-    cta: "Get it on Google Play",
-    available: true,
+    status: "Coming Soon" as const,
+    url: null,
+    cta: "Coming Soon",
+    available: false,
   },
   indusAppstore: {
     name: "Indus Appstore",
