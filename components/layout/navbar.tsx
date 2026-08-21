@@ -52,7 +52,7 @@ export function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-primary/40 bg-primary/10 text-xs font-semibold text-primary hover:bg-primary/20 hover:border-primary/60 transition-colors ml-1 mr-1"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-primary/40 bg-primary/10 font-delius text-xs font-semibold text-primary hover:bg-primary/20 hover:border-primary/60 transition-colors ml-1 mr-1"
                 >
                   <Store className="size-3.5" />
                   <span>{link.label}</span>
@@ -80,7 +80,7 @@ export function Navbar() {
           >
             <Link href="#download">
               <DownloadIcon size={16} animateOnHover />
-              <span>Get BuildRate</span>
+              <span className="font-duru-sans">Get BuildRate</span>
             </Link>
           </Button>
         </div>
@@ -119,7 +119,7 @@ export function Navbar() {
                       key={link.label}
                       href={link.href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="flex items-center gap-2 px-3 py-2.5 rounded-lg border border-primary/40 bg-primary/10 text-sm font-semibold text-primary"
+                      className="flex items-center gap-2 px-3 py-2.5 rounded-lg border border-primary/40 bg-primary/10 font-delius text-sm font-semibold text-primary"
                     >
                       <Store className="size-4" />
                       <span>{link.label}</span>
@@ -148,7 +148,7 @@ export function Navbar() {
               >
                 <Link href="#download" onClick={() => setMobileMenuOpen(false)}>
                   <DownloadIcon size={16} animateOnHover />
-                  <span>Get BuildRate</span>
+                  <span className="font-duru-sans">Get BuildRate</span>
                 </Link>
               </Button>
             </div>

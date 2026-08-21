@@ -31,14 +31,14 @@ export function Hero() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           <div className="lg:col-span-7 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold tracking-wide mb-6">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary font-delius text-xs font-semibold tracking-wide mb-6">
               <MapPin className="size-3.5 text-primary" />
               <span>Ahmedabad, Gujarat</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-foreground text-balance leading-[1.12] mb-6">
               Construction Materials,{" "}
-              <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-amber-400 via-primary to-orange-400">
+              <span className="font-exo font-extrabold text-primary bg-clip-text text-transparent bg-gradient-to-r from-amber-400 via-primary to-orange-400">
                 Better Prices
               </span>
             </h1>
@@ -107,7 +107,7 @@ export function Hero() {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55, ease: "easeOut" }}
-              className="relative max-w-[280px] sm:max-w-[310px] md:max-w-[330px] rounded-[2.5rem] border-[3px] border-border/90 bg-card/95 p-2.5 sm:p-3 shadow-2xl shadow-black/60 backdrop-blur-xl"
+              className="relative max-w-[280px] sm:max-w-[310px] md:max-w-[330px] rounded-[2.5rem] border-[3px] border-border/90 bg-card/95 p-2.5 sm:p-3 backdrop-blur-xl"
             >
               <div className="relative overflow-hidden rounded-[2rem] bg-black">
                 <Image
@@ -116,7 +116,7 @@ export function Hero() {
                   width={600}
                   height={1200}
                   priority
-                  className="w-full h-auto object-cover rounded-[2rem]"
+                  className="w-full h-auto object-cover rounded-[2rem] select-none"
                 />
               </div>
             </motion.div>

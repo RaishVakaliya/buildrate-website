@@ -8,6 +8,12 @@
   --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-inter);
+  --font-exo: var(--font-exo);
+  --font-delius: var(--font-delius);
+  --font-overlock: var(--font-overlock);
+  --font-solway: var(--font-solway);
+  --font-emilys-candy: var(--font-emilys-candy);
+  --font-duru-sans: var(--font-duru-sans);
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);

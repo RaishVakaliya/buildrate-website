@@ -6,7 +6,12 @@ import { motion, AnimatePresence } from "motion/react";
 import { Star, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const FAQS = [
+interface FAQItem {
+  question: string;
+  answer: React.ReactNode;
+}
+
+const FAQS: FAQItem[] = [
   {
     question: "What is BuildRate?",
     answer:
@@ -49,8 +54,19 @@ const FAQS = [
   },
   {
     question: "How can I report incorrect information?",
-    answer:
-      "If you notice pricing discrepancies or outdated supplier details, please reach out to our support team directly at buildrate.app@gmail.com.",
+    answer: (
+      <>
+        If you notice pricing discrepancies or outdated supplier details, please
+        reach out to our support team directly at{" "}
+        <a
+          href="mailto:buildrate.app@gmail.com"
+          className="font-solway font-semibold text-primary hover:underline"
+        >
+          buildrate.app@gmail.com
+        </a>
+        .
+      </>
+    ),
   },
 ];
 
@@ -85,7 +101,7 @@ const TESTIMONIALS = [
 ];
 
 export function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>();
 
   const toggleItem = (index: number) => {
     setOpenIndex((prev) => (prev === index ? null : index));
@@ -110,7 +126,8 @@ export function FAQ() {
               id="faq-heading"
               className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-3"
             >
-              Frequently Asked Questions
+              Frequently Asked{" "}
+              <span className="font-exo font-extrabold">Questions</span>
             </h2>
             <p className="text-sm sm:text-base text-muted-foreground mb-8">
               Everything you need to know about BuildRate.
@@ -145,7 +162,7 @@ export function FAQ() {
                           transition={{ duration: 0.25, ease: "easeInOut" }}
                           className="overflow-hidden"
                         >
-                          <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed pt-0 pb-4">
+                          <p className="font-overlock text-xs sm:text-sm text-muted-foreground leading-relaxed pt-0 pb-4">
                             {faq.answer}
                           </p>
                         </motion.div>
@@ -166,7 +183,8 @@ export function FAQ() {
           >
             <div className="mb-8">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-3">
-                What Our Users Say
+                What Our{" "}
+                <span className="font-exo font-extrabold">Users Say</span>
               </h3>
               <p className="text-sm sm:text-base text-muted-foreground">
                 Feedback from builders, contractors, and suppliers.
@@ -201,7 +219,7 @@ export function FAQ() {
                     </div>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-foreground/90 leading-relaxed mb-4">
+                  <p className="font-overlock text-xs sm:text-sm text-foreground/90 leading-relaxed mb-4">
                     &ldquo;{item.message}&rdquo;
                   </p>
 

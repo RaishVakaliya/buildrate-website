@@ -57,7 +57,7 @@ export function Features() {
             className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-foreground mb-4"
           >
             Everything You Need to{" "}
-            <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-amber-400 via-primary to-orange-400">
+            <span className="font-exo font-extrabold text-primary bg-clip-text text-transparent bg-gradient-to-r from-amber-400 via-primary to-orange-400">
               Build Smarter
             </span>
           </h2>

@@ -34,7 +34,6 @@ export function Footer() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 pb-10 border-b border-border/50">
-          {/* Brand Column */}
           <div className="md:col-span-5 space-y-4">
             <Link
               href="#home"
@@ -65,14 +64,13 @@ export function Footer() {
             </p>
 
             {dayName && (
-              <div className="inline-flex items-center gap-1.5 text-xs font-medium text-primary/90 bg-primary/10 border border-primary/20 px-3 py-1 rounded-full">
+              <div className="inline-flex items-center gap-1.5 font-delius text-xs font-medium text-primary/90 bg-primary/10 border border-primary/20 px-3 py-1 rounded-full">
                 <Sparkles className="size-3 text-primary shrink-0" />
                 <span>Have a great {dayName}!</span>
               </div>
             )}
           </div>
 
-          {/* Quick Navigation Links */}
           <div className="md:col-span-3 space-y-3">
             <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
               Navigation
@@ -91,7 +89,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Highlighted Support & Contact */}
           <div className="md:col-span-4 space-y-3">
             <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
               Contact Support
@@ -105,7 +102,7 @@ export function Footer() {
               className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl border border-primary/40 bg-primary/10 text-primary hover:bg-primary/20 hover:border-primary/60 transition-all text-xs sm:text-sm font-semibold shadow-sm group"
             >
               <Mail className="size-4 shrink-0" />
-              <span>buildrate.app@gmail.com</span>
+              <span className="font-solway">buildrate.app@gmail.com</span>
               <Send className="size-3 opacity-60 group-hover:translate-x-0.5 transition-transform" />
             </a>
 
@@ -115,13 +112,12 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar: Copyright & Credit */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
           <p>&copy; {currentYear} BuildRate. All rights reserved.</p>
 
           <p className="flex items-center gap-1">
             Built by{" "}
-            <span className="font-semibold text-foreground">
+            <span className="font-emilys-candy text-sm tracking-wide text-[#5bfcdc]">
               Raish Vakaliya
             </span>
           </p>

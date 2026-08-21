@@ -46,14 +46,14 @@ export function BecomeSupplier() {
             className="lg:col-span-5 flex justify-center order-2 lg:order-1"
           >
             <div className="relative w-full max-w-[290px] sm:max-w-[320px] md:max-w-[340px]">
-              <div className="rounded-[2.25rem] border-[3px] border-border/90 bg-card p-2 sm:p-2.5 shadow-2xl shadow-black/50">
+              <div className="rounded-[2.25rem] border-[3px] border-border/90 bg-card p-2 sm:p-2.5">
                 <div className="relative overflow-hidden rounded-[1.75rem] bg-black">
                   <Image
                     src="/become-supplier.webp"
                     alt="BuildRate Become a Supplier form"
                     width={600}
                     height={1200}
-                    className="w-full h-auto object-cover rounded-[1.75rem]"
+                    className="w-full h-auto object-cover rounded-[1.75rem] select-none"
                   />
                 </div>
               </div>
@@ -67,7 +67,7 @@ export function BecomeSupplier() {
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="lg:col-span-7 order-1 lg:order-2 text-center lg:text-left"
           >
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold tracking-wide mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary font-delius text-xs font-semibold tracking-wide mb-4">
               <Store className="size-3.5 text-primary" />
               <span>Supplier Registration</span>
             </div>
@@ -77,7 +77,7 @@ export function BecomeSupplier() {
               className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-foreground mb-4"
             >
               Grow Your Business with{" "}
-              <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-amber-400 via-primary to-orange-400">
+              <span className="font-exo font-extrabold text-primary bg-clip-text text-transparent bg-gradient-to-r from-amber-400 via-primary to-orange-400">
                 BuildRate
               </span>
             </h2>
