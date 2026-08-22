@@ -13,7 +13,7 @@ import {
   Tag,
 } from "lucide-react";
 import { Button } from "@/components/animate-ui/components/buttons/button";
-import { Download as DownloadIcon } from "@/components/animate-ui/icons/download";
+import { AnimatedDownloadButton } from "@/components/ui/animated-download-button";
 
 const MATERIAL_TAGS = [
   { icon: Layers, label: "Cement" },
@@ -49,16 +49,14 @@ export function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 mb-10">
-              <Button
-                asChild
+              <AnimatedDownloadButton
+                href="#download"
                 size="lg"
-                className="w-full sm:w-auto text-base font-semibold shadow-lg shadow-primary/25 cursor-pointer"
+                variant="hero"
+                className="w-full sm:w-auto font-bold tracking-wide"
               >
-                <Link href="#download">
-                  <DownloadIcon size={20} animateOnHover />
-                  <span>Download BuildRate</span>
-                </Link>
-              </Button>
+                Download BuildRate
+              </AnimatedDownloadButton>
 
               <Button
                 asChild

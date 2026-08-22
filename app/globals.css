@@ -151,3 +151,136 @@
 .animate-float-reverse {
   animation: float-reverse 8s ease-in-out infinite;
 }
+
+/* Custom Animated Download Button */
+.btn-animated-download {
+  --btn-main-color: var(--primary);
+  --btn-bg: #2a2a2a;
+  --btn-bg-sub: #1a1a1a;
+  --btn-font-color: #f3f3f3;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid var(--btn-main-color);
+  box-shadow: 3.5px 3.5px 0px var(--btn-main-color);
+  background-color: var(--btn-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+}
+
+.btn-animated-download .btn-download-text,
+.btn-animated-download .btn-download-icon {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-animated-download .btn-download-text {
+  padding-left: 44px;
+  padding-right: 18px;
+  color: var(--btn-font-color);
+  font-weight: 600;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.btn-animated-download.btn-lg .btn-download-text {
+  padding-left: 50px;
+  padding-right: 22px;
+}
+
+.btn-animated-download .btn-download-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 38px;
+  height: 100%;
+  background-color: var(--btn-bg-sub);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.btn-animated-download.btn-lg .btn-download-icon {
+  width: 44px;
+}
+
+.btn-animated-download .btn-download-svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--btn-main-color);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-animated-download.btn-lg .btn-download-svg {
+  width: 22px;
+  height: 22px;
+}
+
+.btn-animated-download:hover {
+  background-color: var(--btn-bg);
+  box-shadow: 4.5px 4.5px 0px var(--btn-main-color);
+}
+
+.btn-animated-download:hover .btn-download-text {
+  color: transparent;
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.btn-animated-download:hover .btn-download-icon {
+  width: 100%;
+}
+
+.btn-animated-download:hover .btn-download-svg {
+  transform: scale(1.1);
+}
+
+.btn-animated-download:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px 0px var(--btn-main-color);
+}
+
+/* Hero Variant - Radiant Amber Glow & Inverted Gradient Icon Box */
+.btn-animated-download.btn-hero {
+  --btn-main-color: #f59e0b;
+  --btn-bg: #1c1c1c;
+  --btn-font-color: #ffffff;
+  border: 2px solid #f59e0b;
+  box-shadow: 4px 4px 0px #d97706, 0 0 24px rgba(245, 158, 11, 0.22);
+}
+
+.btn-animated-download.btn-hero .btn-download-icon {
+  background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+}
+
+.btn-animated-download.btn-hero .btn-download-svg {
+  fill: #141414;
+}
+
+.btn-animated-download.btn-hero:hover {
+  background-color: #1c1c1c;
+  box-shadow: 5px 5px 0px #d97706, 0 0 32px rgba(245, 158, 11, 0.38);
+}
+
+.btn-animated-download.btn-hero:hover .btn-download-icon {
+  background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+  width: 100%;
+}
+
+.btn-animated-download.btn-hero:hover .btn-download-svg {
+  fill: #141414;
+  transform: scale(1.15);
+}
+
+.btn-animated-download.btn-hero:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px 0px #d97706;
+}
+
+

@@ -5,8 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, Store, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import { Button } from "@/components/animate-ui/components/buttons/button";
-import { Download as DownloadIcon } from "@/components/animate-ui/icons/download";
+import { AnimatedDownloadButton } from "@/components/ui/animated-download-button";
 
 const NAV_LINKS = [
   { label: "Features", href: "#features" },
@@ -73,16 +72,12 @@ export function Navbar() {
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
-          <Button
-            asChild
-            size="default"
-            className="shadow-md shadow-primary/20 cursor-pointer"
+          <AnimatedDownloadButton
+            href="#download"
+            textClassName="font-duru-sans"
           >
-            <Link href="#download">
-              <DownloadIcon size={16} animateOnHover />
-              <span className="font-duru-sans">Get BuildRate</span>
-            </Link>
-          </Button>
+            Get BuildRate
+          </AnimatedDownloadButton>
         </div>
 
         <div className="flex md:hidden items-center gap-2">
@@ -141,16 +136,14 @@ export function Navbar() {
             </nav>
 
             <div className="pt-2 border-t border-border/60">
-              <Button
-                asChild
-                size="default"
-                className="w-full shadow-md shadow-primary/20 cursor-pointer"
+              <AnimatedDownloadButton
+                href="#download"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full"
+                textClassName="font-duru-sans"
               >
-                <Link href="#download" onClick={() => setMobileMenuOpen(false)}>
-                  <DownloadIcon size={16} animateOnHover />
-                  <span className="font-duru-sans">Get BuildRate</span>
-                </Link>
-              </Button>
+                Get BuildRate
+              </AnimatedDownloadButton>
             </div>
           </motion.div>
         )}
