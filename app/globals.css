@@ -252,7 +252,9 @@
   --btn-bg: #1c1c1c;
   --btn-font-color: #ffffff;
   border: 2px solid #f59e0b;
-  box-shadow: 4px 4px 0px #d97706, 0 0 24px rgba(245, 158, 11, 0.22);
+  box-shadow:
+    4px 4px 0px #d97706,
+    0 0 24px rgba(245, 158, 11, 0.22);
 }
 
 .btn-animated-download.btn-hero .btn-download-icon {
@@ -265,7 +267,9 @@
 
 .btn-animated-download.btn-hero:hover {
   background-color: #1c1c1c;
-  box-shadow: 5px 5px 0px #d97706, 0 0 32px rgba(245, 158, 11, 0.38);
+  box-shadow:
+    5px 5px 0px #d97706,
+    0 0 32px rgba(245, 158, 11, 0.38);
 }
 
 .btn-animated-download.btn-hero:hover .btn-download-icon {
@@ -282,5 +286,3 @@
   transform: translate(3px, 3px);
   box-shadow: 0px 0px 0px #d97706;
 }
-
-
