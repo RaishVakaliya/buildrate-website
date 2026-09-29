@@ -66,7 +66,7 @@ const duruSans = Duru_Sans({
   display: "swap",
 });
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://buildrate.app";
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://buildrate.tech";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
